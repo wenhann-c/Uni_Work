@@ -1,0 +1,12 @@
+#define FMT_HEADER_ONLY
+#include <fmt/core.h>
+#include <fmt/ranges.h>
+#include <iostream>
+#include <vector>
+
+
+int main() {
+    std::vector<int> v = {42, 5, 1};
+    fmt::print("Das Array ist: {0} und {1}.\n", v, "wir finden das gut");
+    fmt::print("{0} {0} {1}\n", "Juhu!", fmt::join(v, " -> "));
+}
